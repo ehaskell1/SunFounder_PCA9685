@@ -240,7 +240,7 @@ class PWM(object):
 
     def map(self, x, in_min, in_max, out_min, out_max):
         '''To map the value from arange to another'''
-        return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
+        return (x - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
 
     @property
     def debug(self):
